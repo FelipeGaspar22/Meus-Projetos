@@ -3,44 +3,53 @@
 #include <locale.h>
 
 int main(int argc, char *argv[]) {
-	setlocale(LC_ALL, "Portuguese");
-	
+    setlocale(LC_ALL, "Portuguese");
+
     int opcao_menu;
     int slots_personagem[3] = {1, 2, 3};
-    
-    printf("=====================================================================\n");
-    printf("OpÁ„o 1: Play\n");
-    printf("OpÁ„o 2: Creditos\n");
-    printf("=====================================================================\n");
-    printf("Insira o numero da OpÁ„o Escolhida: ");
-    scanf("%d", &opcao_menu);
-	
-	switch(opcao_menu) {
-		case 1:
-			printf("=====================================================================\n");
-			printf("! -- SLOTS DE PERSONAGEM -- !\n");
-			printf("=====================================================================\n");
-			printf("Slot de Personagem 1: Vazio\n");
-			printf("Slot de Personagem 2: Vazio\n");
-			printf("Slot de Personagem 3: Vazio\n");
-			printf("=====================================================================\n");
-			break;
-		
-		case 2:
-			printf("=====================================================================\n");
-			printf("! -- CR…DITOS DO JOGO -- !\n");
-			printf("=====================================================================\n");
-			printf("Desenvolvedor: Felipe Gaspar\n");
-			
-			break;
-			
-		default:
-			printf("=======================\n");
-			printf("OpÁ„o invalidade!\n");
-			break;
 
-	}
-	
+    do {
 
-	return 0;
+        printf("=====================================================================\n");
+        printf("Op√ß√£o 1: Play\n");
+        printf("Op√ß√£o 2: Creditos\n");
+        printf("Op√ß√£o 3: Sair\n");
+        printf("=====================================================================\n");
+        printf("Insira o numero da Op√ß√£o Escolhida: ");
+        scanf("%d", &opcao_menu);
+
+        switch(opcao_menu) {
+
+            case 1:
+                printf("=====================================================================\n");
+                printf("! -- SLOTS DE PERSONAGEM -- !\n");
+                printf("=====================================================================\n");
+                printf("Slot de Personagem 1: Vazio\n");
+                printf("Slot de Personagem 2: Vazio\n");
+                printf("Slot de Personagem 3: Vazio\n");
+                printf("=====================================================================\n");
+                printf("Insira o numero da Op√ß√£o Escolhida: ");
+                scanf("%d", &opcao_menu);
+                break;
+
+            case 2:
+                printf("=====================================================================\n");
+                printf("! -- CR√âDITOS DO JOGO -- !\n");
+                printf("=====================================================================\n");
+                printf("Desenvolvedor: Felipe Gaspar\n");
+                break;
+
+            case 3:
+                printf("Encerrando o jogo...\n");
+                break;
+
+            default:
+                printf("=======================\n");
+                printf("Op√ß√£o inv√°lida!\n");
+                break;
+        }
+
+    } while (opcao_menu != 3);
+
+    return 0;
 }
