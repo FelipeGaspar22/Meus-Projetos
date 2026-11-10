@@ -5,7 +5,7 @@
 int main(int argc, char *argv[]) {
     setlocale(LC_ALL, "Portuguese");
 
-    int opcao_menu;
+    int opcao_menu, opcao_slot, opcao_creditos;
     int slots_personagem[3] = {1, 2, 3};
 
     do {
@@ -21,22 +21,40 @@ int main(int argc, char *argv[]) {
         switch(opcao_menu) {
 
             case 1:
-                printf("=====================================================================\n");
-                printf("! -- SLOTS DE PERSONAGEM -- !\n");
-                printf("=====================================================================\n");
-                printf("Slot de Personagem 1: Vazio\n");
-                printf("Slot de Personagem 2: Vazio\n");
-                printf("Slot de Personagem 3: Vazio\n");
-                printf("=====================================================================\n");
-                printf("Insira o numero da Opção Escolhida: ");
-                scanf("%d", &opcao_menu);
+
+                do {
+
+                    printf("=====================================================================\n");
+                    printf("! -- SLOTS DE PERSONAGEM -- !\n");
+                    printf("=====================================================================\n");
+                    printf("1 - Slot de Personagem 1: Vazio\n");
+                    printf("2 - Slot de Personagem 2: Vazio\n");
+                    printf("3 - Slot de Personagem 3: Vazio\n");
+                    printf("4 - Voltar\n");
+                    printf("=====================================================================\n");
+                    printf("Insira o numero da Opção Escolhida: ");
+                    scanf("%d", &opcao_slot);
+
+                } while(opcao_slot != 4);
                 break;
 
             case 2:
-                printf("=====================================================================\n");
-                printf("! -- CRÉDITOS DO JOGO -- !\n");
-                printf("=====================================================================\n");
-                printf("Desenvolvedor: Felipe Gaspar\n");
+                do {
+                    
+                    
+                    printf("=====================================================================\n");
+                    printf("! -- CRÉDITOS DO JOGO -- !\n");
+                    printf("=====================================================================\n");
+                    printf("Desenvolvedor: Felipe Gaspar\n");
+                    printf("Roterista: Felipe Gaspar\n");
+                    printf("\n");
+                    printf("1 - Voltar\n");
+                    printf("=====================================================================\n");
+                    printf("Insira o numero da Opção Escolhida: ");
+                    scanf("%d", &opcao_creditos);
+                        
+                    
+                } while (opcao_creditos != 1);
                 break;
 
             case 3:
