@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
     int opcao_menu, opcao_slot, opcao_creditos;
     int slots_personagem[3] = {1, 2, 3};
 
-   do {
+    do {
 
         printf("=====================================================================\n");
         printf("\n");
@@ -23,7 +23,10 @@ int main(int argc, char *argv[]) {
         printf("Opção 3: Sair\n");
         printf("=====================================================================\n");
         printf("Insira o numero da Opção Escolhida: ");
-        scanf("%d", &opcao_menu);
+        if (scanf("%d", &opcao_menu) != 1) {
+            while (getchar() != '\n');
+            return -1;
+        }
         printf("\n");
 
         switch(opcao_menu) {
@@ -73,9 +76,16 @@ int main(int argc, char *argv[]) {
             case 3:
                 printf("Encerrando o jogo...\n");
                 break;
+            
+            case -1:
+                printf("\n");
+                printf("Valor inválida!\n");
+                printf("Pressione Enter para Retornar ao Menu!\n");
+                getchar();
+                break;
 
             default:
-                printf("=======================\n");
+                printf("\n");
                 printf("Opção inválida!\n");
                 break;
         }
