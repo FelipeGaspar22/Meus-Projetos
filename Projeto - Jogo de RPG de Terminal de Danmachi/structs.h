@@ -5,6 +5,7 @@ typedef struct {
 
     char nome[100];
     char classe[100];
+    int vivo;
     int ocupado;
 
     int Lv;
