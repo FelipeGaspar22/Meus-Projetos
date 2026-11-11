@@ -11,8 +11,12 @@ int main(int argc, char *argv[]) {
     int opcao_menu, opcao_slot, opcao_creditos;
     int slots_personagem[3] = {1, 2, 3};
 
-    do {
+   do {
 
+        printf("=====================================================================\n");
+        printf("\n");
+        printf("                         ! -- MENU -- !          \n");
+        printf("\n");
         printf("=====================================================================\n");
         printf("Opção 1: Play\n");
         printf("Opção 2: Creditos\n");
@@ -20,6 +24,7 @@ int main(int argc, char *argv[]) {
         printf("=====================================================================\n");
         printf("Insira o numero da Opção Escolhida: ");
         scanf("%d", &opcao_menu);
+        printf("\n");
 
         switch(opcao_menu) {
 
@@ -28,7 +33,9 @@ int main(int argc, char *argv[]) {
                 do {
 
                     printf("=====================================================================\n");
+                    printf("\n");
                     printf("! -- SLOTS DE PERSONAGEM -- !\n");
+                    printf("\n");
                     printf("=====================================================================\n");
                     printf("1 - Slot de Personagem 1: Vazio\n");
                     printf("2 - Slot de Personagem 2: Vazio\n");
@@ -37,6 +44,7 @@ int main(int argc, char *argv[]) {
                     printf("=====================================================================\n");
                     printf("Insira o numero da Opção Escolhida: ");
                     scanf("%d", &opcao_slot);
+                    printf("\n");
 
                 } while(opcao_slot != 4);
                 break;
@@ -46,7 +54,9 @@ int main(int argc, char *argv[]) {
                     
                     
                     printf("=====================================================================\n");
+                    printf("\n");
                     printf("! -- CRÉDITOS DO JOGO -- !\n");
+                    printf("\n");
                     printf("=====================================================================\n");
                     printf("Desenvolvedor: Felipe Gaspar\n");
                     printf("Roterista: Felipe Gaspar\n");
@@ -55,7 +65,7 @@ int main(int argc, char *argv[]) {
                     printf("=====================================================================\n");
                     printf("Insira o numero da Opção Escolhida: ");
                     scanf("%d", &opcao_creditos);
-                        
+                    printf("\n");
                     
                 } while (opcao_creditos != 1);
                 break;
